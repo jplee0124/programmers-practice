@@ -1,0 +1,8 @@
+def solution(s):
+    zero_to_nine = ['zero','one','two','three','four','five',
+                    'six','seven','eight','nine']
+    
+    for i, _ in enumerate(zero_to_nine):
+        s = s.replace(zero_to_nine[i],str(i))
+    
+    return int(s)
