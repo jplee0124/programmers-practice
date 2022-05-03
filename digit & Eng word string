@@ -1,0 +1,17 @@
+def solution(s):
+    zero_to_nine = {'zero':0, 'one':1, 'two':2, 'three':3, 'four':4, 'five':5, 
+                    'six':6, 'seven':7, 'eight':8, 'nine':9}
+    new_s = []
+    str1ng = []
+    for i in s:
+        if i.isdigit() == False:
+            str1ng.append(i)
+            num1 = ''.join(str1ng)
+            if num1 in zero_to_nine:
+                st1 = str(zero_to_nine.get(num1))
+                new_s.append(st1)
+                str1ng = []
+        else:
+             new_s.append(i)   
+    result = int(''.join(new_s))
+    return result
